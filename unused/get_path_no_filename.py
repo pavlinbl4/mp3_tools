@@ -3,6 +3,7 @@
 import os
 from pathlib import Path
 
+
 def der_path(full_path):
     # using os
     dir_path = os.path.dirname(full_path)
@@ -12,6 +13,3 @@ def der_path(full_path):
 
     # Splitting the string on slash and joining back
     dir_path = '/'.join(full_path.split('/')[:-1])
-
-
-
