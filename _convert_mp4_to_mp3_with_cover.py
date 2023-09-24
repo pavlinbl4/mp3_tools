@@ -1,14 +1,14 @@
-from converter.mp3_converter import convert_mp4_to_mp3
+from tools.mp3_converter import convert_mp4_to_mp3
 from tools.add_cover_to_mp3 import add_mp3_cover
 from tools.extract_mp4_cover import get_mp4_cover
 from tools.filename_or_extension import cut_off_extension_from_filename
 from tools.files_work import find_files
+from tools.tk_tools import select_folder_via_gui
 
 
 def main():
     #  select folder with files
-    # folder_with_files = select_folder_via_gui('/Users/evgeniy/Movies/Youtube')
-    folder_with_files = '/Users/evgeniy/Movies/Youtube/Mamedov Reads'  # temp for test
+    folder_with_files = select_folder_via_gui('/Users/evgeniy/Movies/Youtube')
 
     # find files to convert
     mp4_files_list = find_files(folder_with_files, extension='mp4')
@@ -31,7 +31,7 @@ def main():
         # add cover to mp3
         add_mp3_cover(jpg_file_path, mp3_file_path)
 
-    return "work complited"
+    return "work completed"
 
 
 if __name__ == '__main__':
