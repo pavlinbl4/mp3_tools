@@ -1,8 +1,9 @@
 from tkinter import filedialog, messagebox, Tk
 
 
-
 def select_folder_via_gui(initialdir):
+    # return path to selected directory
+
     root = Tk()
     root.withdraw()
 
@@ -17,5 +18,4 @@ def select_folder_via_gui(initialdir):
 
 
 if __name__ == '__main__':
-    # display_info("NO KEYWORDS FOR WORK")
-    select_folder_via_gui('/Volumes/big4photo-4/EDITED_JPEG_ARCHIV/Downloaded_from_fotoagency')
+    print(select_folder_via_gui('/Volumes/big4photo-4/EDITED_JPEG_ARCHIV/Downloaded_from_fotoagency'))
