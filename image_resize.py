@@ -1,12 +1,6 @@
 from PIL import Image
-from pathlib import Path
 
-
-def der_path(path_to_image):
-    # Using pathlib.Path.parent
-    file_name = Path(path_to_image).name
-    dir_path = Path(path_to_image).parent
-    return file_name, dir_path
+from path_and_name import der_path
 
 
 def resize_image(path_to_image, max_size=400):
