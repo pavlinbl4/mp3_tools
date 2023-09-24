@@ -9,7 +9,7 @@ def der_path(path_to_image):
     return file_name, dir_path
 
 
-def resize_image(path_to_image, max_size=200):
+def resize_image(path_to_image, max_size=400):
     img = Image.open(path_to_image)
 
     # Get the width and height of the image
@@ -31,9 +31,9 @@ def resize_image(path_to_image, max_size=200):
     file_name, dir_path = der_path(path_to_image)
 
     # Save resized image
-    img.save(f"{dir_path}/{file_name}_resized.jpg")
+    img.save(f"{dir_path}/{file_name.split('.')[0]}_resized.jpg", format="jpeg", quality=50)
 
-    return f"{dir_path}/{file_name}_resized.jpg"
+    return f"{dir_path}/{file_name.split('.')[0]}_resized.jpg"
 
 
 if __name__ == '__main__':
