@@ -3,7 +3,7 @@ from PIL import Image
 from path_and_name import der_path
 
 
-def resize_image(path_to_image, max_size=400):
+def resize_image(path_to_image, max_size=500):
     img = Image.open(path_to_image)
 
     # Get the width and height of the image
