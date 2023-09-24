@@ -1,6 +1,6 @@
 from PIL import Image
 
-from path_and_name import der_path
+from tools.path_and_name import der_path
 
 
 def resize_image(path_to_image, max_size=500):
@@ -31,4 +31,4 @@ def resize_image(path_to_image, max_size=500):
 
 
 if __name__ == '__main__':
-    resize_image('/Volumes/big4photo/Movies/Youtube/Роман "Тайна булавки". Эдгар Уоллес./thumb.jpg', )
+    resize_image('/Volumes/big4photo/Downloads/KSP_017975_00031_0h.JPG', )
