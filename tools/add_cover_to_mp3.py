@@ -1,16 +1,16 @@
 from mutagen.mp3 import MP3
 from mutagen.id3 import ID3, APIC
 
-from image_resize import resize_image
+from tools.image_resize import resize_image
 
 
 def load_image(path_to_image):
     # resize image
-    path_to_resized_image = resize_image(path_to_image)
+    # path_to_resized_image = resize_image(path_to_image)
 
     # Load the resized image
 
-    with open(path_to_resized_image, 'rb') as r_img_in:
+    with open(path_to_image, 'rb') as r_img_in:
         r_img_data = r_img_in.read()
 
     return r_img_data
@@ -36,7 +36,5 @@ def add_mp3_cover(path_to_image, path_to_media_file):
 
 
 if __name__ == '__main__':
-    add_mp3_cover('/Volumes/big4photo/Movies/Youtube/Роман "Тайна булавки". Эдгар Уоллес./thumb.jpg',
-                  '/Volumes/big4photo/Movies/Youtube/Роман "Тайна булавки". Эдгар Уоллес./Эдгар Уоллес. Тайна булавки. Главы 1-3..mp3')
-
-
+    add_mp3_cover('/Users/evgeniy/Movies/Youtube/Mamedov Reads/Усталый путник, отдохни  Джон Уиндэм_cover.jpg',
+                  '/Users/evgeniy/Movies/Youtube/Mamedov Reads/Усталый путник, отдохни  Джон Уиндэм.mp3')
