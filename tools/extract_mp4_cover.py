@@ -1,6 +1,6 @@
 from mutagen.mp4 import MP4
 
-from path_and_name import der_path, file_name_and_dir_path
+from tools.path_and_name import file_name_and_dir_path
 
 
 def get_mp4_cover(path_to_media_file):
@@ -15,4 +15,5 @@ def get_mp4_cover(path_to_media_file):
 
 if __name__ == '__main__':
     get_mp4_cover(
-        '/Volumes/big4photo/Movies/Youtube/Роман "Тайна булавки". Эдгар Уоллес./Эдгар Уоллес. Тайна булавки. Главы 1-3..mp4')
+        '/Volumes/big4photo/Movies/Youtube/Роман "Тайна булавки".'
+        ' Эдгар Уоллес./Эдгар Уоллес. Тайна булавки. Главы 1-3..mp4')
