@@ -20,6 +20,8 @@ def list_string_way(file_name):
 
 
 if __name__ == '__main__':
-    print(select_file_name(
-        'Эдгар Уоллес. Тайна булавки. Главы 1-3..mp4'))
-    print(cut_off_extension_from_filename('Эдгар Уоллес. Тайна булавки. Главы 1-3..mp4'))
+    assert select_file_name(
+        'Эдгар Уоллес. Тайна булавки. Главы 1-3..mp4') == 'Эдгар Уоллес. Тайна булавки. Главы 1-3.'
+
+    assert cut_off_extension_from_filename(
+        'Эдгар Уоллес. Тайна булавки. Главы 1-3..mp4') == 'Эдгар Уоллес. Тайна булавки. Главы 1-3.'
