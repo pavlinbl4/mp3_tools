@@ -3,7 +3,7 @@ from tkinter import filedialog
 import os
 from pathlib import Path
 
-from converter.main_modul import work_with_file
+from tools.main_modul import work_with_file
 
 
 def gui_window():
