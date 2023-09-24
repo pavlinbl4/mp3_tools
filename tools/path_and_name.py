@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from converter.filename_or_extension import cut_off_extension_from_filename
+from tools.filename_or_extension import cut_off_extension_from_filename
 
 
 def der_path(path_to_image):
@@ -15,6 +15,7 @@ def file_name_and_dir_path(full_path):
     dir_path = '/'.join(full_path.split('/')[:-1])
     file_name_no_extension = cut_off_extension_from_filename(full_path.split('/')[-1])
     return file_name_no_extension, dir_path
+
 
 if __name__ == '__main__':
     print(file_name_and_dir_path(
